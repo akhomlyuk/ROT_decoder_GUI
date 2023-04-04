@@ -1,0 +1,7 @@
+/bruted.txt
+/decrypted.txt
+/encrypted.txt
+/test.py
+venv*
+.idea
+__pycache__
