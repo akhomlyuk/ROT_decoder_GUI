@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'designrtQJYi.ui'
+## Form generated from reading UI file 'designSceHeG.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -32,7 +32,7 @@ class Ui_MainWindow(object):
         font.setPointSize(10)
         MainWindow.setFont(font)
         icon = QIcon()
-        icon.addFile(u":/icons/res/vpn_key_black_24dp.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u":/icons/res/main.svg", QSize(), QIcon.Normal, QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setAutoFillBackground(False)
         MainWindow.setStyleSheet(u"QTextEdit {\n"
@@ -91,6 +91,7 @@ class Ui_MainWindow(object):
 "QSpinBox:hover {\n"
 "    border-color: #009900;\n"
 "}")
+        MainWindow.setIconSize(QSize(32, 32))
         MainWindow.setTabShape(QTabWidget.Rounded)
         self.actionabout = QAction(MainWindow)
         self.actionabout.setObjectName(u"actionabout")
@@ -116,6 +117,11 @@ class Ui_MainWindow(object):
         self.input_text_lbl.setObjectName(u"input_text_lbl")
 
         self.Original_text.addWidget(self.input_text_lbl)
+
+        self.chars_label = QLabel(self.centralwidget)
+        self.chars_label.setObjectName(u"chars_label")
+
+        self.Original_text.addWidget(self.chars_label)
 
         self.textEdit = QTextEdit(self.centralwidget)
         self.textEdit.setObjectName(u"textEdit")
@@ -191,14 +197,26 @@ class Ui_MainWindow(object):
 
         self.Buttons.addWidget(self.brute_btn)
 
+        self.open_btn = QPushButton(self.centralwidget)
+        self.open_btn.setObjectName(u"open_btn")
+        self.open_btn.setMinimumSize(QSize(0, 60))
+        self.open_btn.setMaximumSize(QSize(80, 16777215))
+        self.open_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        icon6 = QIcon()
+        icon6.addFile(u":/icons/res/open.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.open_btn.setIcon(icon6)
+        self.open_btn.setIconSize(QSize(32, 32))
+
+        self.Buttons.addWidget(self.open_btn)
+
         self.copy_btn = QPushButton(self.centralwidget)
         self.copy_btn.setObjectName(u"copy_btn")
         self.copy_btn.setMinimumSize(QSize(0, 60))
         self.copy_btn.setMaximumSize(QSize(80, 16777215))
         self.copy_btn.setCursor(QCursor(Qt.PointingHandCursor))
-        icon6 = QIcon()
-        icon6.addFile(u":/icons/res/copy.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.copy_btn.setIcon(icon6)
+        icon7 = QIcon()
+        icon7.addFile(u":/icons/res/copy.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.copy_btn.setIcon(icon7)
         self.copy_btn.setIconSize(QSize(32, 32))
 
         self.Buttons.addWidget(self.copy_btn)
@@ -208,9 +226,9 @@ class Ui_MainWindow(object):
         self.save_btn.setMinimumSize(QSize(0, 60))
         self.save_btn.setMaximumSize(QSize(80, 16777215))
         self.save_btn.setCursor(QCursor(Qt.PointingHandCursor))
-        icon7 = QIcon()
-        icon7.addFile(u":/icons/res/save.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.save_btn.setIcon(icon7)
+        icon8 = QIcon()
+        icon8.addFile(u":/icons/res/save.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.save_btn.setIcon(icon8)
         self.save_btn.setIconSize(QSize(32, 32))
 
         self.Buttons.addWidget(self.save_btn)
@@ -317,6 +335,7 @@ class Ui_MainWindow(object):
         self.actionabout.setText(QCoreApplication.translate("MainWindow", u"about", None))
         self.actionExit.setText(QCoreApplication.translate("MainWindow", u"Exit", None))
         self.input_text_lbl.setText(QCoreApplication.translate("MainWindow", u"Original text", None))
+        self.chars_label.setText(QCoreApplication.translate("MainWindow", u"Characters:", None))
         self.textEdit.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -329,6 +348,10 @@ class Ui_MainWindow(object):
         self.decrypt_btn.setText(QCoreApplication.translate("MainWindow", u"DECRYPT", None))
         self.encrypt_btn.setText(QCoreApplication.translate("MainWindow", u"ENCRYPT", None))
         self.brute_btn.setText(QCoreApplication.translate("MainWindow", u"BRUTEFORCE", None))
+#if QT_CONFIG(tooltip)
+        self.open_btn.setToolTip(QCoreApplication.translate("MainWindow", u"File open", None))
+#endif // QT_CONFIG(tooltip)
+        self.open_btn.setText("")
 #if QT_CONFIG(tooltip)
         self.copy_btn.setToolTip(QCoreApplication.translate("MainWindow", u"Copy to clipboard", None))
 #endif // QT_CONFIG(tooltip)
