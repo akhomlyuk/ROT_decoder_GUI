@@ -1,6 +1,6 @@
 import sys
 from cipher_functions import decrypt, encrypt
-from PySide6.QtWidgets import QApplication, QMainWindow
+from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox
 from design import Ui_MainWindow
 
 
@@ -16,6 +16,13 @@ class RotDecoder(QMainWindow):
         self.ui.encrypt_btn.clicked.connect(self.checked_dec_btn)
         self.ui.decrypt_btn.clicked.connect(self.checked_enc_btn)
         self.ui.brute_btn.clicked.connect(self.bruteforce)
+        self.ui.actionExit.triggered.connect(sys.exit)
+        self.ui.actionabout.triggered.connect(self.about)
+
+    def about(self):
+        a = 'Author:'
+        b = "<a href='https://t.me/exited3n'>Exited3n</a>"
+        QMessageBox.about(self, "About tool", f"{a} {b}")
 
     def bruteforce(self):
         self.ui.textEdit_2.clear()

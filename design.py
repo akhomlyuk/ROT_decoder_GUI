@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'designLIRmvc.ui'
+## Form generated from reading UI file 'designRUzwvl.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -11,21 +11,22 @@
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
 from PySide6.QtWidgets import (QAbstractSpinBox, QApplication, QFrame, QHBoxLayout,
-    QLabel, QMainWindow, QPushButton, QSizePolicy,
-    QSlider, QSpinBox, QTabWidget, QTextEdit,
-    QVBoxLayout, QWidget)
+    QLabel, QMainWindow, QMenu, QMenuBar,
+    QPushButton, QSizePolicy, QSlider, QSpinBox,
+    QTabWidget, QTextEdit, QVBoxLayout, QWidget)
 import resources
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(682, 619)
+        MainWindow.resize(743, 650)
         font = QFont()
         font.setFamilies([u"Ubuntu"])
         font.setPointSize(10)
@@ -38,10 +39,7 @@ class Ui_MainWindow(object):
 "    border: 2px solid gray;\n"
 "    border-radius: 5px;\n"
 "}\n"
-"QListView {\n"
-"    border: 2px solid gray;\n"
-"    border-radius: 5px;\n"
-"}\n"
+"\n"
 "QPushButton {\n"
 "    border: 2px solid gray;\n"
 "    border-radius: 5px;\n"
@@ -69,23 +67,23 @@ class Ui_MainWindow(object):
 "    background-color: gray;\n"
 "}\n"
 "QSlider::handle:horizontal {\n"
-"    background-color: rgb(85, 170, 255);\n"
-"    width: 22px;\n"
-"    border-radius: 10px;\n"
-"    margin-top: -8px;\n"
-"    margin-bottom: -8px;\n"
+"    background-color: black;\n"
+"    width: 16px;\n"
+"    border-radius:8px;\n"
+"    margin-top: -5px;\n"
+"    margin-bottom: -5px;\n"
 "}\n"
 "QSlider::groove:horizontal {\n"
 "    background-color: transparent;\n"
-"    height: 5px;\n"
+"    height: 7px;\n"
 "}\n"
 "QLabel {\n"
-"	f"
-                        "ont: 500 10pt \"Ubuntu\";\n"
+"	font: 500 11pt \"Ubuntu\";\n"
 "}\n"
 "QSpinBox {\n"
 "    border: 2px solid gray;\n"
-"    border-radius: 5px;\n"
+"    bord"
+                        "er-radius: 5px;\n"
 "    background: transparent;\n"
 "    padding: 2px;\n"
 "}\n"
@@ -94,6 +92,20 @@ class Ui_MainWindow(object):
 "    border-color: #009900;\n"
 "}")
         MainWindow.setTabShape(QTabWidget.Rounded)
+        self.actionabout = QAction(MainWindow)
+        self.actionabout.setObjectName(u"actionabout")
+        icon1 = QIcon()
+        icon1.addFile(u":/icons/res/about.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.actionabout.setIcon(icon1)
+        font1 = QFont()
+        font1.setFamilies([u"Hack NF"])
+        self.actionabout.setFont(font1)
+        self.actionExit = QAction(MainWindow)
+        self.actionExit.setObjectName(u"actionExit")
+        icon2 = QIcon()
+        icon2.addFile(u":/icons/res/exit.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.actionExit.setIcon(icon2)
+        self.actionExit.setFont(font1)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout_2 = QVBoxLayout(self.centralwidget)
@@ -107,10 +119,10 @@ class Ui_MainWindow(object):
 
         self.textEdit = QTextEdit(self.centralwidget)
         self.textEdit.setObjectName(u"textEdit")
-        font1 = QFont()
-        font1.setFamilies([u"Fira Code Medium"])
-        font1.setPointSize(10)
-        self.textEdit.setFont(font1)
+        font2 = QFont()
+        font2.setFamilies([u"Fira Code Medium"])
+        font2.setPointSize(10)
+        self.textEdit.setFont(font2)
         self.textEdit.setContextMenuPolicy(Qt.DefaultContextMenu)
         self.textEdit.setFrameShape(QFrame.StyledPanel)
         self.textEdit.setLineWidth(1)
@@ -129,7 +141,7 @@ class Ui_MainWindow(object):
 
         self.textEdit_2 = QTextEdit(self.centralwidget)
         self.textEdit_2.setObjectName(u"textEdit_2")
-        self.textEdit_2.setFont(font1)
+        self.textEdit_2.setFont(font2)
 
         self.verticalLayout.addWidget(self.textEdit_2)
 
@@ -142,9 +154,9 @@ class Ui_MainWindow(object):
         self.decrypt_btn.setObjectName(u"decrypt_btn")
         self.decrypt_btn.setMinimumSize(QSize(0, 80))
         self.decrypt_btn.setCursor(QCursor(Qt.PointingHandCursor))
-        icon1 = QIcon()
-        icon1.addFile(u":/icons/res/lock_open_black_24dp.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.decrypt_btn.setIcon(icon1)
+        icon3 = QIcon()
+        icon3.addFile(u":/icons/res/lock_open_black_24dp.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.decrypt_btn.setIcon(icon3)
         self.decrypt_btn.setIconSize(QSize(32, 32))
         self.decrypt_btn.setCheckable(True)
         self.decrypt_btn.setChecked(True)
@@ -155,9 +167,9 @@ class Ui_MainWindow(object):
         self.encrypt_btn.setObjectName(u"encrypt_btn")
         self.encrypt_btn.setMinimumSize(QSize(0, 80))
         self.encrypt_btn.setCursor(QCursor(Qt.PointingHandCursor))
-        icon2 = QIcon()
-        icon2.addFile(u":/icons/res/lock_black_24dp.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.encrypt_btn.setIcon(icon2)
+        icon4 = QIcon()
+        icon4.addFile(u":/icons/res/lock_black_24dp.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.encrypt_btn.setIcon(icon4)
         self.encrypt_btn.setIconSize(QSize(32, 32))
         self.encrypt_btn.setCheckable(True)
 
@@ -167,14 +179,14 @@ class Ui_MainWindow(object):
         self.brute_btn.setObjectName(u"brute_btn")
         self.brute_btn.setMinimumSize(QSize(0, 80))
         self.brute_btn.setCursor(QCursor(Qt.PointingHandCursor))
-        icon3 = QIcon()
+        icon5 = QIcon()
         iconThemeName = u"zoom-in"
         if QIcon.hasThemeIcon(iconThemeName):
-            icon3 = QIcon.fromTheme(iconThemeName)
+            icon5 = QIcon.fromTheme(iconThemeName)
         else:
-            icon3.addFile(u":/icons/res/swap_horizontal_circle_black_24dp.svg", QSize(), QIcon.Normal, QIcon.Off)
+            icon5.addFile(u":/icons/res/swap_horizontal_circle_black_24dp.svg", QSize(), QIcon.Normal, QIcon.Off)
 
-        self.brute_btn.setIcon(icon3)
+        self.brute_btn.setIcon(icon5)
         self.brute_btn.setIconSize(QSize(32, 32))
 
         self.horizontalLayout_2.addWidget(self.brute_btn)
@@ -187,12 +199,12 @@ class Ui_MainWindow(object):
         self.key_lbl = QLabel(self.centralwidget)
         self.key_lbl.setObjectName(u"key_lbl")
         self.key_lbl.setEnabled(True)
-        font2 = QFont()
-        font2.setFamilies([u"Ubuntu"])
-        font2.setPointSize(10)
-        font2.setBold(False)
-        font2.setItalic(False)
-        self.key_lbl.setFont(font2)
+        font3 = QFont()
+        font3.setFamilies([u"Ubuntu"])
+        font3.setPointSize(11)
+        font3.setBold(False)
+        font3.setItalic(False)
+        self.key_lbl.setFont(font3)
         self.key_lbl.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout.addWidget(self.key_lbl)
@@ -213,11 +225,11 @@ class Ui_MainWindow(object):
         self.spinBox = QSpinBox(self.centralwidget)
         self.spinBox.setObjectName(u"spinBox")
         self.spinBox.setMinimumSize(QSize(100, 50))
-        font3 = QFont()
-        font3.setFamilies([u"Hack NF"])
-        font3.setPointSize(18)
-        font3.setBold(True)
-        self.spinBox.setFont(font3)
+        font4 = QFont()
+        font4.setFamilies([u"Hack NF"])
+        font4.setPointSize(18)
+        font4.setBold(True)
+        self.spinBox.setFont(font4)
         self.spinBox.setAlignment(Qt.AlignCenter)
         self.spinBox.setButtonSymbols(QAbstractSpinBox.NoButtons)
         self.spinBox.setAccelerated(False)
@@ -230,7 +242,46 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_2.addLayout(self.horizontalLayout)
 
+        self.Author = QHBoxLayout()
+        self.Author.setObjectName(u"Author")
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setMinimumSize(QSize(0, 15))
+        self.label.setFont(font3)
+        self.label.setTextFormat(Qt.MarkdownText)
+        self.label.setOpenExternalLinks(True)
+
+        self.Author.addWidget(self.label)
+
+
+        self.verticalLayout_2.addLayout(self.Author)
+
         MainWindow.setCentralWidget(self.centralwidget)
+        self.menuBar = QMenuBar(MainWindow)
+        self.menuBar.setObjectName(u"menuBar")
+        self.menuBar.setGeometry(QRect(0, 0, 743, 20))
+        self.menuBar.setFont(font1)
+        self.menuBar.setCursor(QCursor(Qt.PointingHandCursor))
+        self.menuAbout = QMenu(self.menuBar)
+        self.menuAbout.setObjectName(u"menuAbout")
+        font5 = QFont()
+        font5.setFamilies([u"Hack NF"])
+        font5.setPointSize(9)
+        self.menuAbout.setFont(font5)
+        self.menuAbout.setCursor(QCursor(Qt.PointingHandCursor))
+        self.menuAbout.setTearOffEnabled(False)
+        self.menuAbout.setSeparatorsCollapsible(False)
+        self.menuAbout.setToolTipsVisible(False)
+        self.menuFile = QMenu(self.menuBar)
+        self.menuFile.setObjectName(u"menuFile")
+        self.menuFile.setFont(font1)
+        self.menuFile.setCursor(QCursor(Qt.PointingHandCursor))
+        MainWindow.setMenuBar(self.menuBar)
+
+        self.menuBar.addAction(self.menuFile.menuAction())
+        self.menuBar.addAction(self.menuAbout.menuAction())
+        self.menuAbout.addAction(self.actionabout)
+        self.menuFile.addAction(self.actionExit)
 
         self.retranslateUi(MainWindow)
 
@@ -239,6 +290,8 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Caesar cipher: encode and decode", None))
+        self.actionabout.setText(QCoreApplication.translate("MainWindow", u"about", None))
+        self.actionExit.setText(QCoreApplication.translate("MainWindow", u"Exit", None))
         self.input_text_lbl.setText(QCoreApplication.translate("MainWindow", u"Original text", None))
         self.textEdit.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
@@ -253,5 +306,8 @@ class Ui_MainWindow(object):
         self.encrypt_btn.setText(QCoreApplication.translate("MainWindow", u"ENCRYPT", None))
         self.brute_btn.setText(QCoreApplication.translate("MainWindow", u"BRUTEFORCE", None))
         self.key_lbl.setText(QCoreApplication.translate("MainWindow", u"Shift key (positive or negative integer):", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"Author: [Exited3n](https://t.me/exited3n)", None))
+        self.menuAbout.setTitle(QCoreApplication.translate("MainWindow", u"About", None))
+        self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
     # retranslateUi
 

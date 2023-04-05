@@ -5,3 +5,6 @@
 venv*
 .idea
 __pycache__
+/design.ui
+/caesar_cipher.exe
+/resources.qrc
