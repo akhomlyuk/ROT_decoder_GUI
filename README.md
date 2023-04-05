@@ -1,2 +1,2 @@
 ### Main window GIF
-![Main windows](res/caesar_decoder.gif "Main screen")
+![Main window](res/caesar_decoder.gif)
