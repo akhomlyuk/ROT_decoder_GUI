@@ -31,17 +31,14 @@ class RotDecoder(QMainWindow):
         self.ui.textEdit_2.clear()
         if decrypt(self.ui.textEdit.toPlainText(), 1)[1] > decrypt(self.ui.textEdit.toPlainText(), 1)[2]:
             for i in range(1, 33):
-                ls = ['ROT key ' + str(i) + ': ' + decrypt(self.ui.textEdit.toPlainText(), i)[0] + '\n' for i in
-                      range(1, 33)]
                 self.ui.textEdit_2.append(f'ROT key {i}:{decrypt(self.ui.textEdit.toPlainText(), i)[0]}')
         else:
             for i in range(1, 27):
-                ls = ['ROT key ' + str(i) + ': ' + decrypt(self.ui.textEdit.toPlainText(), i)[0] + '\n' for i in
-                      range(1, 27)]
                 self.ui.textEdit_2.append(f'ROT key {i}: {decrypt(self.ui.textEdit.toPlainText(), i)[0]}')
 
     def save_file(self):
-        s_file = QFileDialog.getSaveFileName(None, 'Save bruteforced text to a file', f'{os.path.abspath(os.getcwd())}', "Text Files (*.txt)")
+        s_file = QFileDialog.getSaveFileName(None, 'Save bruteforced text to a file', f'{os.path.abspath(os.getcwd())}',
+                                             "Text Files (*.txt)")
         text = self.ui.textEdit_2.toPlainText()
         if s_file[0]:
             with open(s_file[0], 'w', encoding='UTF-8') as file:
@@ -71,6 +68,7 @@ class RotDecoder(QMainWindow):
 
     def copy_to_clipboard(self) -> None:
         QApplication.clipboard().setText(self.ui.textEdit_2.toPlainText())
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
