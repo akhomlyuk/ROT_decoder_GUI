@@ -1,6 +1,7 @@
 import sys
+import os
 from cipher_functions import decrypt, encrypt
-from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox
+from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox, QFileDialog
 from design import Ui_MainWindow
 
 
@@ -9,7 +10,7 @@ class RotDecoder(QMainWindow):
         super(RotDecoder, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.connect_slider_to_spinbox()
+        self.connection_slider_spinbox()
         self.decrypting()
         self.ui.spinBox.valueChanged.connect(self.decrypting)
         self.ui.textEdit.textChanged.connect(self.decrypting)
@@ -18,6 +19,8 @@ class RotDecoder(QMainWindow):
         self.ui.brute_btn.clicked.connect(self.bruteforce)
         self.ui.actionExit.triggered.connect(sys.exit)
         self.ui.actionabout.triggered.connect(self.about)
+        self.ui.copy_btn.clicked.connect(self.copy_to_clipboard)
+        self.ui.save_btn.clicked.connect(self.save_file)
 
     def about(self):
         a = 'Author:'
@@ -30,16 +33,19 @@ class RotDecoder(QMainWindow):
             for i in range(1, 33):
                 ls = ['ROT key ' + str(i) + ': ' + decrypt(self.ui.textEdit.toPlainText(), i)[0] + '\n' for i in
                       range(1, 33)]
-                with open('bruted.txt', 'w', encoding='UTF-8') as file:
-                    file.writelines(ls)
-                    self.ui.textEdit_2.append(f'ROT key {i}:{decrypt(self.ui.textEdit.toPlainText(), i)[0]}')
+                self.ui.textEdit_2.append(f'ROT key {i}:{decrypt(self.ui.textEdit.toPlainText(), i)[0]}')
         else:
             for i in range(1, 27):
                 ls = ['ROT key ' + str(i) + ': ' + decrypt(self.ui.textEdit.toPlainText(), i)[0] + '\n' for i in
                       range(1, 27)]
-                with open('bruted.txt', 'w', encoding='UTF-8') as file:
-                    file.writelines(ls)
-                    self.ui.textEdit_2.append(f'ROT key {i}: {decrypt(self.ui.textEdit.toPlainText(), i)[0]}')
+                self.ui.textEdit_2.append(f'ROT key {i}: {decrypt(self.ui.textEdit.toPlainText(), i)[0]}')
+
+    def save_file(self):
+        s_file = QFileDialog.getSaveFileName(None, 'Save bruteforced text to a file', f'{os.path.abspath(os.getcwd())}', "Text Files (*.txt)")
+        text = self.ui.textEdit_2.toPlainText()
+        if s_file[0]:
+            with open(s_file[0], 'w', encoding='UTF-8') as file:
+                file.write(text)
 
     def checked_dec_btn(self):
         self.ui.decrypt_btn.nextCheckState()
@@ -53,7 +59,7 @@ class RotDecoder(QMainWindow):
         self.ui.spinBox.valueChanged.connect(self.decrypting)
         self.ui.textEdit.textChanged.connect(self.decrypting)
 
-    def connect_slider_to_spinbox(self) -> None:
+    def connection_slider_spinbox(self) -> None:
         self.ui.horizontalSlider.valueChanged.connect(self.ui.spinBox.setValue)
         self.ui.spinBox.valueChanged.connect(self.ui.horizontalSlider.setValue)
 
@@ -63,6 +69,8 @@ class RotDecoder(QMainWindow):
     def encrypting(self):
         self.ui.textEdit_2.setText(encrypt(self.ui.textEdit.toPlainText(), self.ui.spinBox.value()))
 
+    def copy_to_clipboard(self) -> None:
+        QApplication.clipboard().setText(self.ui.textEdit_2.toPlainText())
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

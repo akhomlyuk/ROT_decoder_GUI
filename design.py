@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'designRUzwvl.ui'
+## Form generated from reading UI file 'designrtQJYi.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(743, 650)
+        MainWindow.resize(861, 578)
         font = QFont()
         font.setFamilies([u"Ubuntu"])
         font.setPointSize(10)
@@ -108,14 +108,14 @@ class Ui_MainWindow(object):
         self.actionExit.setFont(font1)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.verticalLayout_2 = QVBoxLayout(self.centralwidget)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout_3 = QVBoxLayout()
-        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.verticalLayout = QVBoxLayout(self.centralwidget)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.Original_text = QVBoxLayout()
+        self.Original_text.setObjectName(u"Original_text")
         self.input_text_lbl = QLabel(self.centralwidget)
         self.input_text_lbl.setObjectName(u"input_text_lbl")
 
-        self.verticalLayout_3.addWidget(self.input_text_lbl)
+        self.Original_text.addWidget(self.input_text_lbl)
 
         self.textEdit = QTextEdit(self.centralwidget)
         self.textEdit.setObjectName(u"textEdit")
@@ -127,29 +127,29 @@ class Ui_MainWindow(object):
         self.textEdit.setFrameShape(QFrame.StyledPanel)
         self.textEdit.setLineWidth(1)
 
-        self.verticalLayout_3.addWidget(self.textEdit)
+        self.Original_text.addWidget(self.textEdit)
 
 
-        self.verticalLayout_2.addLayout(self.verticalLayout_3)
+        self.verticalLayout.addLayout(self.Original_text)
 
-        self.verticalLayout = QVBoxLayout()
-        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.Decrypte_text = QVBoxLayout()
+        self.Decrypte_text.setObjectName(u"Decrypte_text")
         self.outpu_text_lbl = QLabel(self.centralwidget)
         self.outpu_text_lbl.setObjectName(u"outpu_text_lbl")
 
-        self.verticalLayout.addWidget(self.outpu_text_lbl)
+        self.Decrypte_text.addWidget(self.outpu_text_lbl)
 
         self.textEdit_2 = QTextEdit(self.centralwidget)
         self.textEdit_2.setObjectName(u"textEdit_2")
         self.textEdit_2.setFont(font2)
 
-        self.verticalLayout.addWidget(self.textEdit_2)
+        self.Decrypte_text.addWidget(self.textEdit_2)
 
 
-        self.verticalLayout_2.addLayout(self.verticalLayout)
+        self.verticalLayout.addLayout(self.Decrypte_text)
 
-        self.horizontalLayout_2 = QHBoxLayout()
-        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.Buttons = QHBoxLayout()
+        self.Buttons.setObjectName(u"Buttons")
         self.decrypt_btn = QPushButton(self.centralwidget)
         self.decrypt_btn.setObjectName(u"decrypt_btn")
         self.decrypt_btn.setMinimumSize(QSize(0, 80))
@@ -161,7 +161,7 @@ class Ui_MainWindow(object):
         self.decrypt_btn.setCheckable(True)
         self.decrypt_btn.setChecked(True)
 
-        self.horizontalLayout_2.addWidget(self.decrypt_btn)
+        self.Buttons.addWidget(self.decrypt_btn)
 
         self.encrypt_btn = QPushButton(self.centralwidget)
         self.encrypt_btn.setObjectName(u"encrypt_btn")
@@ -173,7 +173,7 @@ class Ui_MainWindow(object):
         self.encrypt_btn.setIconSize(QSize(32, 32))
         self.encrypt_btn.setCheckable(True)
 
-        self.horizontalLayout_2.addWidget(self.encrypt_btn)
+        self.Buttons.addWidget(self.encrypt_btn)
 
         self.brute_btn = QPushButton(self.centralwidget)
         self.brute_btn.setObjectName(u"brute_btn")
@@ -189,13 +189,37 @@ class Ui_MainWindow(object):
         self.brute_btn.setIcon(icon5)
         self.brute_btn.setIconSize(QSize(32, 32))
 
-        self.horizontalLayout_2.addWidget(self.brute_btn)
+        self.Buttons.addWidget(self.brute_btn)
+
+        self.copy_btn = QPushButton(self.centralwidget)
+        self.copy_btn.setObjectName(u"copy_btn")
+        self.copy_btn.setMinimumSize(QSize(0, 60))
+        self.copy_btn.setMaximumSize(QSize(80, 16777215))
+        self.copy_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        icon6 = QIcon()
+        icon6.addFile(u":/icons/res/copy.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.copy_btn.setIcon(icon6)
+        self.copy_btn.setIconSize(QSize(32, 32))
+
+        self.Buttons.addWidget(self.copy_btn)
+
+        self.save_btn = QPushButton(self.centralwidget)
+        self.save_btn.setObjectName(u"save_btn")
+        self.save_btn.setMinimumSize(QSize(0, 60))
+        self.save_btn.setMaximumSize(QSize(80, 16777215))
+        self.save_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        icon7 = QIcon()
+        icon7.addFile(u":/icons/res/save.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.save_btn.setIcon(icon7)
+        self.save_btn.setIconSize(QSize(32, 32))
+
+        self.Buttons.addWidget(self.save_btn)
 
 
-        self.verticalLayout_2.addLayout(self.horizontalLayout_2)
+        self.verticalLayout.addLayout(self.Buttons)
 
-        self.horizontalLayout = QHBoxLayout()
-        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.ShiftKey = QHBoxLayout()
+        self.ShiftKey.setObjectName(u"ShiftKey")
         self.key_lbl = QLabel(self.centralwidget)
         self.key_lbl.setObjectName(u"key_lbl")
         self.key_lbl.setEnabled(True)
@@ -207,7 +231,7 @@ class Ui_MainWindow(object):
         self.key_lbl.setFont(font3)
         self.key_lbl.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout.addWidget(self.key_lbl)
+        self.ShiftKey.addWidget(self.key_lbl)
 
         self.horizontalSlider = QSlider(self.centralwidget)
         self.horizontalSlider.setObjectName(u"horizontalSlider")
@@ -220,7 +244,7 @@ class Ui_MainWindow(object):
         self.horizontalSlider.setTickPosition(QSlider.NoTicks)
         self.horizontalSlider.setTickInterval(0)
 
-        self.horizontalLayout.addWidget(self.horizontalSlider)
+        self.ShiftKey.addWidget(self.horizontalSlider)
 
         self.spinBox = QSpinBox(self.centralwidget)
         self.spinBox.setObjectName(u"spinBox")
@@ -237,10 +261,10 @@ class Ui_MainWindow(object):
         self.spinBox.setMaximum(50)
         self.spinBox.setValue(13)
 
-        self.horizontalLayout.addWidget(self.spinBox)
+        self.ShiftKey.addWidget(self.spinBox)
 
 
-        self.verticalLayout_2.addLayout(self.horizontalLayout)
+        self.verticalLayout.addLayout(self.ShiftKey)
 
         self.Author = QHBoxLayout()
         self.Author.setObjectName(u"Author")
@@ -254,12 +278,12 @@ class Ui_MainWindow(object):
         self.Author.addWidget(self.label)
 
 
-        self.verticalLayout_2.addLayout(self.Author)
+        self.verticalLayout.addLayout(self.Author)
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.menuBar = QMenuBar(MainWindow)
         self.menuBar.setObjectName(u"menuBar")
-        self.menuBar.setGeometry(QRect(0, 0, 743, 20))
+        self.menuBar.setGeometry(QRect(0, 0, 861, 20))
         self.menuBar.setFont(font1)
         self.menuBar.setCursor(QCursor(Qt.PointingHandCursor))
         self.menuAbout = QMenu(self.menuBar)
@@ -305,6 +329,14 @@ class Ui_MainWindow(object):
         self.decrypt_btn.setText(QCoreApplication.translate("MainWindow", u"DECRYPT", None))
         self.encrypt_btn.setText(QCoreApplication.translate("MainWindow", u"ENCRYPT", None))
         self.brute_btn.setText(QCoreApplication.translate("MainWindow", u"BRUTEFORCE", None))
+#if QT_CONFIG(tooltip)
+        self.copy_btn.setToolTip(QCoreApplication.translate("MainWindow", u"Copy to clipboard", None))
+#endif // QT_CONFIG(tooltip)
+        self.copy_btn.setText("")
+#if QT_CONFIG(tooltip)
+        self.save_btn.setToolTip(QCoreApplication.translate("MainWindow", u"Save to a file", None))
+#endif // QT_CONFIG(tooltip)
+        self.save_btn.setText("")
         self.key_lbl.setText(QCoreApplication.translate("MainWindow", u"Shift key (positive or negative integer):", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Author: [Exited3n](https://t.me/exited3n)", None))
         self.menuAbout.setTitle(QCoreApplication.translate("MainWindow", u"About", None))
