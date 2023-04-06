@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>res/gh.svg</file>
+    <file>res/tg.svg</file>
+    <file>res/open.svg</file>
+    <file>res/ex.jpg</file>
+    <file>res/main.svg</file>
+    <file>res/copy.svg</file>
+    <file>res/save.svg</file>
+    <file>res/exit.svg</file>
+    <file>res/about.svg</file>
+    <file>res/lock_black_24dp.svg</file>
+    <file>res/lock_open_black_24dp.svg</file>
+    <file>res/vpn_key_black_24dp.svg</file>
+    <file>res/swap_horizontal_circle_black_24dp.svg</file>
+  </qresource>
+</RCC>

@@ -1,15 +1,26 @@
 import sys
 import os
 from cipher_functions import decrypt, encrypt
-from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox, QFileDialog
+from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox, QFileDialog, QWidget
+from PySide6 import QtCore
 from design import Ui_MainWindow
+from window import Ui_Form
+
+class AboutBox(QWidget):
+    def __init__(self):
+        super(AboutBox, self).__init__()
+        self.abox = Ui_Form()
+        self.abox.setupUi(self)
+        self.setWindowFlags(QtCore.Qt.Dialog)
 
 
 class RotDecoder(QMainWindow):
     def __init__(self):
         super(RotDecoder, self).__init__()
+        self.abox = AboutBox()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        # self.setWindowFlag(QtCore.Qt.FramelessWindowHint, True)
         self.connection_slider_spinbox()
         self.decrypting()
         self.chars_count()
@@ -20,15 +31,13 @@ class RotDecoder(QMainWindow):
         self.ui.decrypt_btn.clicked.connect(self.checked_enc_btn)
         self.ui.brute_btn.clicked.connect(self.bruteforce)
         self.ui.actionExit.triggered.connect(sys.exit)
-        self.ui.actionabout.triggered.connect(self.about)
+        self.ui.actionabout.triggered.connect(self.show_about_window)
         self.ui.copy_btn.clicked.connect(self.copy_to_clipboard)
         self.ui.save_btn.clicked.connect(self.save_file)
         self.ui.open_btn.clicked.connect(self.open_file)
 
-    def about(self):
-        a = 'Author:'
-        b = "<a href='https://t.me/exited3n'>Exited3n</a>"
-        QMessageBox.about(self, "About", f"{a} {b}")
+    def show_about_window(self):
+        self.abox.show()
 
     def bruteforce(self):
         self.ui.textEdit_2.clear()
@@ -89,8 +98,8 @@ class RotDecoder(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-
     window = RotDecoder()
+
     window.show()
 
     sys.exit(app.exec())

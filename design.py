@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'designSceHeG.ui'
+## Form generated from reading UI file 'designhAtcCO.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(861, 578)
+        MainWindow.resize(850, 500)
         font = QFont()
         font.setFamilies([u"Ubuntu"])
         font.setPointSize(10)
@@ -35,7 +35,8 @@ class Ui_MainWindow(object):
         icon.addFile(u":/icons/res/main.svg", QSize(), QIcon.Normal, QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setAutoFillBackground(False)
-        MainWindow.setStyleSheet(u"QTextEdit {\n"
+        MainWindow.setStyleSheet(u"\n"
+"QTextEdit {\n"
 "    border: 2px solid gray;\n"
 "    border-radius: 5px;\n"
 "}\n"
@@ -82,8 +83,8 @@ class Ui_MainWindow(object):
 "}\n"
 "QSpinBox {\n"
 "    border: 2px solid gray;\n"
-"    bord"
-                        "er-radius: 5px;\n"
+"   "
+                        " border-radius: 5px;\n"
 "    background: transparent;\n"
 "    padding: 2px;\n"
 "}\n"
@@ -109,7 +110,10 @@ class Ui_MainWindow(object):
         self.actionExit.setFont(font1)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
+        self.centralwidget.setMaximumSize(QSize(16777215, 16777215))
+        self.centralwidget.setStyleSheet(u"")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
+        self.verticalLayout.setSpacing(6)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.Original_text = QVBoxLayout()
         self.Original_text.setObjectName(u"Original_text")
@@ -131,6 +135,7 @@ class Ui_MainWindow(object):
         self.textEdit.setFont(font2)
         self.textEdit.setContextMenuPolicy(Qt.DefaultContextMenu)
         self.textEdit.setFrameShape(QFrame.StyledPanel)
+        self.textEdit.setFrameShadow(QFrame.Sunken)
         self.textEdit.setLineWidth(1)
 
         self.Original_text.addWidget(self.textEdit)
@@ -148,6 +153,7 @@ class Ui_MainWindow(object):
         self.textEdit_2 = QTextEdit(self.centralwidget)
         self.textEdit_2.setObjectName(u"textEdit_2")
         self.textEdit_2.setFont(font2)
+        self.textEdit_2.setReadOnly(True)
 
         self.Decrypte_text.addWidget(self.textEdit_2)
 
@@ -301,7 +307,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         self.menuBar = QMenuBar(MainWindow)
         self.menuBar.setObjectName(u"menuBar")
-        self.menuBar.setGeometry(QRect(0, 0, 861, 20))
+        self.menuBar.setGeometry(QRect(0, 0, 850, 20))
         self.menuBar.setFont(font1)
         self.menuBar.setCursor(QCursor(Qt.PointingHandCursor))
         self.menuAbout = QMenu(self.menuBar)
@@ -332,6 +338,9 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Caesar cipher: encode and decode", None))
+#if QT_CONFIG(whatsthis)
+        MainWindow.setWhatsThis(QCoreApplication.translate("MainWindow", u"Easter egg here!", None))
+#endif // QT_CONFIG(whatsthis)
         self.actionabout.setText(QCoreApplication.translate("MainWindow", u"about", None))
         self.actionExit.setText(QCoreApplication.translate("MainWindow", u"Exit", None))
         self.input_text_lbl.setText(QCoreApplication.translate("MainWindow", u"Original text", None))
