@@ -4,6 +4,8 @@
 #### Build project
 ```bash
 pip install nuitka
+pip install ordered-set
+pip install zstandard
 ```
 
 ```bash

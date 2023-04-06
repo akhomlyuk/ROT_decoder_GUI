@@ -1,10 +1,11 @@
 import sys
 import os
 from cipher_functions import decrypt, encrypt
-from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox, QFileDialog, QWidget
+from PySide6.QtWidgets import QApplication, QMainWindow, QFileDialog, QWidget
 from PySide6 import QtCore
 from design import Ui_MainWindow
 from window import Ui_Form
+
 
 class AboutBox(QWidget):
     def __init__(self):
@@ -99,7 +100,6 @@ class RotDecoder(QMainWindow):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = RotDecoder()
-
     window.show()
 
     sys.exit(app.exec())
