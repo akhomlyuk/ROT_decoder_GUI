@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'designTtRalq.ui'
+## Form generated from reading UI file 'designvsjeIY.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(850, 500)
+        MainWindow.resize(865, 600)
         font = QFont()
         font.setFamilies([u"Ubuntu"])
         font.setPointSize(10)
@@ -35,12 +35,10 @@ class Ui_MainWindow(object):
         icon.addFile(u":/icons/res/main.svg", QSize(), QIcon.Normal, QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setAutoFillBackground(False)
-        MainWindow.setStyleSheet(u"\n"
-"QTextEdit {\n"
+        MainWindow.setStyleSheet(u"QTextEdit {\n"
 "    border: 2px solid gray;\n"
 "    border-radius: 5px;\n"
 "}\n"
-"\n"
 "QPushButton {\n"
 "    border: 2px solid gray;\n"
 "    border-radius: 5px;\n"
@@ -74,17 +72,21 @@ class Ui_MainWindow(object):
 "    margin-top: -5px;\n"
 "    margin-bottom: -5px;\n"
 "}\n"
+"QSlider::handle:pressed {\n"
+"    background-color: rgb(0, 121, 182);\n"
+"\n"
+"}\n"
 "QSlider::groove:horizontal {\n"
 "    background-color: transparent;\n"
 "    height: 7px;\n"
 "}\n"
 "QLabel {\n"
-"	font: 500 11pt \"Ubuntu\";\n"
+"	font: 500 11"
+                        "pt \"Ubuntu\";\n"
 "}\n"
 "QSpinBox {\n"
 "    border: 2px solid gray;\n"
-"   "
-                        " border-radius: 5px;\n"
+"    border-radius: 5px;\n"
 "    background: transparent;\n"
 "    padding: 2px;\n"
 "}\n"
@@ -164,7 +166,7 @@ class Ui_MainWindow(object):
         self.Buttons.setObjectName(u"Buttons")
         self.decrypt_btn = QPushButton(self.centralwidget)
         self.decrypt_btn.setObjectName(u"decrypt_btn")
-        self.decrypt_btn.setMinimumSize(QSize(0, 80))
+        self.decrypt_btn.setMinimumSize(QSize(0, 70))
         self.decrypt_btn.setCursor(QCursor(Qt.PointingHandCursor))
         icon3 = QIcon()
         icon3.addFile(u":/icons/res/lock_open_black_24dp.svg", QSize(), QIcon.Normal, QIcon.Off)
@@ -177,7 +179,7 @@ class Ui_MainWindow(object):
 
         self.encrypt_btn = QPushButton(self.centralwidget)
         self.encrypt_btn.setObjectName(u"encrypt_btn")
-        self.encrypt_btn.setMinimumSize(QSize(0, 80))
+        self.encrypt_btn.setMinimumSize(QSize(0, 70))
         self.encrypt_btn.setCursor(QCursor(Qt.PointingHandCursor))
         icon4 = QIcon()
         icon4.addFile(u":/icons/res/lock_black_24dp.svg", QSize(), QIcon.Normal, QIcon.Off)
@@ -189,7 +191,7 @@ class Ui_MainWindow(object):
 
         self.brute_btn = QPushButton(self.centralwidget)
         self.brute_btn.setObjectName(u"brute_btn")
-        self.brute_btn.setMinimumSize(QSize(0, 80))
+        self.brute_btn.setMinimumSize(QSize(0, 70))
         self.brute_btn.setCursor(QCursor(Qt.PointingHandCursor))
         icon5 = QIcon()
         iconThemeName = u"zoom-in"
@@ -307,7 +309,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         self.menuBar = QMenuBar(MainWindow)
         self.menuBar.setObjectName(u"menuBar")
-        self.menuBar.setGeometry(QRect(0, 0, 850, 20))
+        self.menuBar.setGeometry(QRect(0, 0, 865, 20))
         self.menuBar.setFont(font1)
         self.menuBar.setCursor(QCursor(Qt.PointingHandCursor))
         self.menuAbout = QMenu(self.menuBar)
