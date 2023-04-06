@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'designhAtcCO.ui'
+## Form generated from reading UI file 'designTtRalq.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -263,7 +263,7 @@ class Ui_MainWindow(object):
         self.horizontalSlider.setMinimum(-50)
         self.horizontalSlider.setMaximum(50)
         self.horizontalSlider.setPageStep(5)
-        self.horizontalSlider.setValue(13)
+        self.horizontalSlider.setValue(10)
         self.horizontalSlider.setOrientation(Qt.Horizontal)
         self.horizontalSlider.setTickPosition(QSlider.NoTicks)
         self.horizontalSlider.setTickInterval(0)
@@ -283,7 +283,7 @@ class Ui_MainWindow(object):
         self.spinBox.setAccelerated(False)
         self.spinBox.setMinimum(-50)
         self.spinBox.setMaximum(50)
-        self.spinBox.setValue(13)
+        self.spinBox.setValue(10)
 
         self.ShiftKey.addWidget(self.spinBox)
 
@@ -352,7 +352,7 @@ class Ui_MainWindow(object):
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Fira Code Medium'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Uryyb grnz!</p></body></html>", None))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Rovvy dokw!</p></body></html>", None))
         self.outpu_text_lbl.setText(QCoreApplication.translate("MainWindow", u"Encrypted/Decrypted text", None))
         self.decrypt_btn.setText(QCoreApplication.translate("MainWindow", u"DECRYPT", None))
         self.encrypt_btn.setText(QCoreApplication.translate("MainWindow", u"ENCRYPT", None))

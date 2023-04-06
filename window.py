@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'windowsXljoda.ui'
+## Form generated from reading UI file 'windowsxpCVgp.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -25,7 +25,7 @@ class Ui_Form(object):
             Form.setObjectName(u"Form")
         Form.setWindowModality(Qt.WindowModal)
         Form.setEnabled(True)
-        Form.resize(460, 135)
+        Form.resize(463, 138)
         font = QFont()
         font.setFamilies([u"Ubuntu Medium"])
         font.setPointSize(14)
@@ -70,7 +70,12 @@ class Ui_Form(object):
         self.textEdit = QTextEdit(Form)
         self.textEdit.setObjectName(u"textEdit")
         self.textEdit.setEnabled(True)
-        self.textEdit.setGeometry(QRect(300, 20, 151, 81))
+        self.textEdit.setGeometry(QRect(290, 20, 161, 81))
+        font1 = QFont()
+        font1.setFamilies([u"Ubuntu Medium"])
+        font1.setPointSize(10)
+        self.textEdit.setFont(font1)
+        self.textEdit.setAcceptDrops(False)
         self.textEdit.setReadOnly(True)
 
         self.retranslateUi(Form)
@@ -93,11 +98,13 @@ class Ui_Form(object):
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Ubuntu Medium'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">PySide6</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Material design icons</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;"
-                        "\">Coco Line icons</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Qt Designer</span></p></body></html>", None))
+"</style></head><body style=\" font-family:'Ubuntu Medium'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">PySide6</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Material design icons</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Coco Line icons</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+                        "block-indent:0; text-indent:0px;\">Qt Designer</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Nuitka</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">mingw64</p></body></html>", None))
     # retranslateUi
 
