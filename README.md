@@ -1,11 +1,9 @@
 ### Main window GIF
-![Main window](res/caesar_decoder.gif)
+![Main window](res/main.png)
 
 #### Build project
 ```bash
 pip install nuitka
-pip install ordered-set
-pip install zstandard
 ```
 
 ```bash
