@@ -1,9 +1,9 @@
 <RCC>
   <qresource prefix="icons">
+    <file>res/python.svg</file>
     <file>res/gh.svg</file>
     <file>res/tg.svg</file>
     <file>res/open.svg</file>
-    <file>res/ex.jpg</file>
     <file>res/main.svg</file>
     <file>res/copy.svg</file>
     <file>res/save.svg</file>

@@ -7,12 +7,17 @@ from design import Ui_MainWindow
 from window import Ui_Form
 
 
+def clickable_label(e):
+    os.startfile('https://python.org')
+
+
 class AboutBox(QWidget):
     def __init__(self):
         super(AboutBox, self).__init__()
         self.abox = Ui_Form()
         self.abox.setupUi(self)
         self.setWindowFlags(QtCore.Qt.Dialog)
+        self.abox.picture_label.mousePressEvent = clickable_label
 
 
 class RotDecoder(QMainWindow):

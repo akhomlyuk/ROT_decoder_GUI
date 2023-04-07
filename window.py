@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'windowsxpCVgp.ui'
+## Form generated from reading UI file 'windowsudmHrz.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -23,7 +23,7 @@ class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.setWindowModality(Qt.WindowModal)
+        Form.setWindowModality(Qt.ApplicationModal)
         Form.setEnabled(True)
         Form.resize(463, 138)
         font = QFont()
@@ -41,9 +41,13 @@ class Ui_Form(object):
         self.picture_label.setGeometry(QRect(10, 10, 120, 120))
         self.picture_label.setMinimumSize(QSize(100, 100))
         self.picture_label.setMaximumSize(QSize(500, 500))
+        self.picture_label.setCursor(QCursor(Qt.PointingHandCursor))
+        self.picture_label.setMouseTracking(True)
         self.picture_label.setStyleSheet(u"")
-        self.picture_label.setPixmap(QPixmap(u":/icons/res/ex.jpg"))
+        self.picture_label.setPixmap(QPixmap(u":/icons/res/python.svg"))
         self.picture_label.setScaledContents(True)
+        self.picture_label.setMargin(0)
+        self.picture_label.setOpenExternalLinks(True)
         self.year = QLabel(Form)
         self.year.setObjectName(u"year")
         self.year.setGeometry(QRect(390, 110, 71, 21))
