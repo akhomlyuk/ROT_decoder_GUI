@@ -1,4 +1,4 @@
-### Main window GIF
+### Main window
 ![Main window](res/main.png)
 
 #### Build project
